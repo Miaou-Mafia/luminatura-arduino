@@ -8,6 +8,17 @@
 #include <esp_mac.h>
 EthernetUDP myUdp;
 
+bool plaque01 = false;
+bool plaque02 = false;
+bool plaque03 = false;
+
+int magenta[] = {255, 102, 196};
+int yellow[] = {255, 222, 95};
+int cyan[] = {92, 225, 230};
+int red[] = {244, 112, 0};
+int green[] = {154, 237, 40};
+int purple[] = {128, 31, 219};
+
 IPAddress myDestinationIp(192,168,1,150);
 unsigned int myDestinationPort = 8001;
 
@@ -97,7 +108,7 @@ void loop()
   pinMode(32, INPUT);
   digitalWrite(26,HIGH);
   
-  while(cycles < 5000 ) {
+  while(cycles < 1000 ) {
     if ( digitalRead(32) == HIGH) break;
     cycles ++;
   }
@@ -121,6 +132,11 @@ void loop()
 
   int myIntToSend = 100;
   myMicroOsc.sendInt("/address", myIntToSend);
+
+  if (cycle >= 400) {
+    plaque01 = true;
+    magenta[];
+  }
 
 
 }
