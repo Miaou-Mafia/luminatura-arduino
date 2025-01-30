@@ -12,13 +12,6 @@ bool plaque01 = false;
 bool plaque02 = false;
 bool plaque03 = false;
 
-int magenta[] = { 255, 102, 196 };
-int yellow[] = { 255, 222, 95 };
-int cyan[] = { 92, 225, 230 };
-int red[] = { 244, 112, 0 };
-int green[] = { 154, 237, 40 };
-int purple[] = { 128, 31, 219 };
-int blue[] = { 0, 71, 171 };
 
 IPAddress myDestinationIp(192, 168, 1, 150);
 unsigned int myDestinationPort = 8001;
@@ -78,10 +71,6 @@ void sendColor(int r, int g, int b) {
         String channel = "/dmx/channel" + String(i);
         Serial.print("Sending OSC message: ");
         Serial.println(channel);
-
-        myMicroOsc.sendInt((channel + "/r").c_str(), r);
-        myMicroOsc.sendInt((channel + "/g").c_str(), g);
-        myMicroOsc.sendInt((channel + "/b").c_str(), b);
     }
 }
 
@@ -119,31 +108,6 @@ void loop() {
     }
 
     if (cycles >= 400) {
-        plaque01 = true;
-        //plaque02 = true;
-        //plaque03 = true;
-    }
-
-    if (plaque01 && plaque02 && plaque03) {
-        Serial.println("All plaques activated, sending blue color");
-        sendColor(0, 71, 171);  // Blue
-    } else if (plaque01 && plaque02) {
-        Serial.println("Plaque 1 and 2 activated, sending red color");
-        sendColor(244, 112, 0);  // Red/Orange
-    } else if (plaque02 && plaque03) {
-        Serial.println("Plaque 2 and 3 activated, sending green color");
-        sendColor(154, 237, 40);  // Green
-    } else if (plaque01 && plaque03) {
-        Serial.println("Plaque 1 and 3 activated, sending purple color");
-        sendColor(128, 31, 219);  // Purple
-    } else if (plaque01) {
-        Serial.println("Plaque 1 activated, sending magenta color");
-        sendColor(255, 102, 196);  // Magenta
-    } else if (plaque02) {
-        Serial.println("Plaque 2 activated, sending yellow color");
-        sendColor(255, 222, 95);  // Yellow
-    } else if (plaque03) {
-        Serial.println("Plaque 3 activated, sending cyan color");
-        sendColor(92, 225, 230);  // Cyan
+        plaque03 = true;
     }
 }
