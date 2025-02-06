@@ -3,7 +3,7 @@
 #X obj 100 129 list trim;
 #X obj 100 153 route cap;
 #X obj 100 177 f;
-#X floatatom 104 208 5 0 0 0 - - - 0;
+#X floatatom 81 229 5 0 0 0 - - - 0;
 #X obj 346 103 oscparse;
 #X obj 345 133 list trim;
 #X obj 345 157 route cap;
@@ -15,7 +15,7 @@
 #X obj 588 175 f;
 #X floatatom 588 201 5 0 0 0 - - - 0;
 #X obj 111 808 netsend -u -b;
-#X obj 89 629 oscformat /qlc/1;
+#X obj 75 676 oscformat /qlc/1;
 #X obj 247 628 oscformat /qlc/2;
 #X obj 404 624 oscformat /qlc/3;
 #X obj 130 259 > 400;
@@ -32,7 +32,7 @@
 #X obj 333 346 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 635 253 > 400;
 #X obj 635 277 tgl 19 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
-#X obj 633 304 change;
+#X obj 632 304 change;
 #X obj 577 284 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 577 347 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 101 78 netreceive -u -b 8001;
@@ -43,10 +43,13 @@
 #X obj 193 528 clip 0 1;
 #X floatatom 148 574 5 0 0 0 - - - 0;
 #X obj 208 480 / 800;
+#X obj 190 189 pack f 50;
+#X obj 228 266 float;
+#X obj 196 235 line;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
-#X connect 3 0 4 0;
+#X connect 3 0 44 0;
 #X connect 4 0 39 0;
 #X connect 5 0 6 0;
 #X connect 6 0 7 0;
@@ -85,3 +88,6 @@
 #X connect 41 0 42 0;
 #X connect 42 0 16 0;
 #X connect 43 0 41 0;
+#X connect 44 0 46 0;
+#X connect 45 0 4 0;
+#X connect 46 0 45 0;

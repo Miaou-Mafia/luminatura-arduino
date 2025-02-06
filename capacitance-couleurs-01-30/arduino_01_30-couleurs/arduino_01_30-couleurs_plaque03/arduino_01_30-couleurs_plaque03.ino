@@ -6,9 +6,9 @@
 EthernetUDP myUdp;
 
 IPAddress myDestinationIp(192, 168, 1, 140); // QLC+ IP
-unsigned int myDestinationPort = 8001;      // Port to send OSC to
+unsigned int myDestinationPort = 8003;      // Port to send OSC to
 
-IPAddress myIp(192, 168, 1, 201);  // ESP32 Static IP
+IPAddress myIp(192, 168, 1, 203);  // ESP32 Static IP
 unsigned int myPort = 8000;        // Listening port (not used in your case, just for sending)
 
 MicroOscUdp<1024> myMicroOsc(&myUdp, myDestinationIp, myDestinationPort);
