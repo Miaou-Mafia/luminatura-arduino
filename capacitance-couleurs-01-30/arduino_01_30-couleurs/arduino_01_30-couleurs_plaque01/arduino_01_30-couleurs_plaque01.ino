@@ -73,7 +73,7 @@ void loop() {
   digitalWrite(26, HIGH);
 
   // Read capacitance sensor (basic approach)
-  while (cycles < 500) {
+  while (cycles < 1000) {
     if (digitalRead(32) == HIGH) break;
     cycles++;
   }
