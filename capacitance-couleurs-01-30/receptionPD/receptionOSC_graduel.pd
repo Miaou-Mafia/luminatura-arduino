@@ -54,16 +54,16 @@
 #X floatatom 683 265 5 0 0 0 - - - 0;
 #X obj 682 574 > 0.15;
 #X msg 119 853 connect 192.168.1.150 10001;
-#X msg 342 845 connect 192.168.1.150 10002;
+#X msg 377 852 connect 192.168.1.150 10002;
 #X msg 119 924 disconnect;
 #X obj 120 886 netsend -u -b;
-#X obj 329 887 netsend -u -b;
-#X msg 331 923 disconnect;
+#X obj 364 894 netsend -u -b;
+#X msg 366 930 disconnect;
 #X obj 199 604 netsend -u -b;
 #X msg 353 559 disconnect;
 #X msg 245 525 connect 192.168.1.150 10003;
 #X obj 309 724 t a a a;
-#X obj 333 808 loadbang;
+#X obj 368 815 loadbang;
 #X obj 266 483 loadbang;
 #X obj 193 340 change;
 #X obj 192 274 > 400;
@@ -71,6 +71,10 @@
 #X floatatom 195 375 5 0 0 0 - - - 0;
 #X obj 197 404 oscformat /beta;
 #X obj 213 452 oscformat /alpha;
+#X obj 590 868 netsend -u -b;
+#X msg 592 904 disconnect;
+#X obj 594 789 loadbang;
+#X msg 603 826 connect 192.168.1.150 10004;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -135,6 +139,7 @@
 #X connect 62 0 60 0;
 #X connect 63 0 57 0;
 #X connect 63 1 58 0;
+#X connect 63 2 72 0;
 #X connect 64 0 55 0;
 #X connect 65 0 62 0;
 #X connect 66 0 69 0;
@@ -143,3 +148,6 @@
 #X connect 69 0 70 0;
 #X connect 70 0 60 0;
 #X connect 71 0 60 0;
+#X connect 73 0 72 0;
+#X connect 74 0 75 0;
+#X connect 75 0 72 0;
