@@ -23,3 +23,11 @@ Le code Arduino mesure la capacitance de l’utilisateur, qui correspond à la c
 ## PureData
 Le code PureData collecte les données brutes d'Arduino en fonction de la capacitance de l'utilisateur. Ensuite, un effet de transition fluide est appliqué pour lisser les valeurs. Puis, il envoie deux types de données : les données brutes et les données booléennes. Ces données sont transmises à des ports spécifiques pour chaque logiciel sur le PC.
 
+| Données brutes  | Données booléennes                             |
+| ----- | ------------------------------------- |
+| TouchDesigner - projection sur le sol | Qlc+                                  |
+| TouchDesigner - projection sur le mur | Reaper incluant le fichier Plugdata (Plaque 01)   |
+|  | Reaper incluant le fichier Plugdata (Plaque 02)   |
+| | Reaper incluant le fichier Plugdata (Plaque 03)   |
+
+
