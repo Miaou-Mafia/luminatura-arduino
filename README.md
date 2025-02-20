@@ -9,3 +9,14 @@ Le code Arduino mesure la capacitance de l’utilisateur, qui correspond à la c
 | M5 Stack 1 | 8001 |
 | M5 Stack 2 | 8002 |
 | M5 Stack 3 | 8003 |
+
+### Les différents ports utilisés
+| Port  | Fonction                              |
+| ----- | ------------------------------------- |
+| 10001 | Qlc+                                  |
+| 10002 | TouchDesigner - projection sur le sol |
+| 10003 | Reaper incluant le fichier Plugdata (Plaque 01)   |
+| 10005 | Reaper incluant le fichier Plugdata (Plaque 02)   |
+| 10007 | Reaper incluant le fichier Plugdata (Plaque 03)   |
+| 10004 | TouchDesigner - projection sur le mur |
+
