@@ -2,9 +2,9 @@
 
 ## Arduino 
 
-Le code Arduino mesure la capacitance de l’utilisateur, qui correspond à la capacité du corps à stocker une charge électrique. Cette valeur est limitée à un maximum de 1000 pour assurer une calibration cohérente. Une plaque en acier sert de capteur et détecte les variations de capacitance lorsque l’utilisateur la touche la plaque en acier. Les données captées sont transmises via le port 8001, 8002 et 8003, utilisant une connexion réseau Ethernet pour la communication. PureData reçoit ces informations et les utilise pour générer des interactions sonores et visuelles en temps réel.
+Le code Arduino capte la capacitance de l'utilisateur, qui représente la capacité du corps à accumuler une charge électrique. Cette valeur est limitée à un maximum de 1000 pour garantir une calibration fiable. Une plaque en acier fonctionne comme capteur, détectant les changements de capacitance lorsque l'utilisateur la touche. Les données sont envoyées via les ports 8001, 8002 et 8003, à travers une connexion réseau Ethernet. PureData reçoit ces informations et les transforme en interactions sonores et visuelles en temps réel.
 
-| Atom M5 Stack   | Ports    |
+| Atom M5 Stack   | Port    |
 | ---------- | -------- |
 | M5 Stack 1 | 8001 |
 | M5 Stack 2 | 8002 |
@@ -21,7 +21,8 @@ Le code Arduino mesure la capacitance de l’utilisateur, qui correspond à la c
 | 10004 | TouchDesigner - projection sur le mur |
 
 ## PureData
-Le code PureData collecte les données brutes d'Arduino en fonction de la capacitance de l'utilisateur. Ensuite, un effet de transition fluide est appliqué pour lisser les valeurs. Puis, il envoie deux types de données : les données brutes et les données booléennes. Ces données sont transmises à des ports spécifiques pour chaque logiciel sur le PC.
+
+Le code PureData récupère les données brutes d'Arduino en fonction de la capacitance de l'utilisateur. Ensuite, un effet de transition fluide est appliqué pour adoucir les valeurs. Il envoie ensuite deux types de données : les données brutes et les données booléennes. Ces informations sont envoyées vers des ports spécifiques, chacun étant destiné à un logiciel particulier sur le PC.
 
 | Données brutes  | Données booléennes                             |
 | ----- | ------------------------------------- |
