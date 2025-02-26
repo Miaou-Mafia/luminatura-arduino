@@ -5,7 +5,7 @@
 
 EthernetUDP myUdp;
 
-#define ID 1
+#define ID 2
 
 #include <M5Atom.h> // Inclure la librairie M5 (version pour M5Atom) https://github.com/m5stack/M5Atom
 
