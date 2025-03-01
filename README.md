@@ -4,21 +4,24 @@
 
 Le code Arduino capte la capacitance de l'utilisateur, qui représente la capacité du corps à accumuler une charge électrique. Cette valeur est limitée à un maximum de 1000 pour garantir une calibration fiable. Une plaque en acier fonctionne comme capteur, détectant les changements de capacitance lorsque l'utilisateur la touche. Les données sont envoyées via les ports 8001, 8002 et 8003, à travers une connexion réseau Ethernet. PureData reçoit ces informations et les transforme en interactions sonores et visuelles en temps réel.
 
-| Atom M5 Stack   | Port    |
-| ---------- | -------- |
-| M5 Stack 1 | 8001 |
-| M5 Stack 2 | 8002 |
-| M5 Stack 3 | 8003 |
+| Port | Fonction        | ID  |
+| ---- | --------------- | --- |
+| 8001 | Atom M5 Stack 1 | 01  |
+| 8002 | Atom M5 Stack 2 | 02  |
+| 8003 | Atom M5 Stack 3 | 03  |
 
 ### Les différents ports utilisés
-| Port  | Fonction                              |
-| ----- | ------------------------------------- |
-| 10001 | Qlc+                                  |
-| 10002 | TouchDesigner - projection sur le sol |
-| 10003 | Reaper incluant le fichier Plugdata (Plaque 01)   |
-| 10005 | Reaper incluant le fichier Plugdata (Plaque 02)   |
-| 10007 | Reaper incluant le fichier Plugdata (Plaque 03)   |
-| 10004 | TouchDesigner - projection sur le mur |
+| Port  | Fonction                                        |
+| ----- | ----------------------------------------------- |
+| 8001  | Atom M5 Stack 1                                 |
+| 8002  | Atom M5 Stack 2                                 |
+| 8003  | Atom M5 Stack 3                                 |
+| 10001 | Qlc+                                            |
+| 10002 | TouchDesigner - projection sur le sol           |
+| 10003 | Reaper incluant le premier patch sur Plugdata   |
+| 10004 | TouchDesigner - projection sur le mur           |
+| 10005 | Reaper incluant le deuxième patch sur Plugdata  |
+| 10007 | Reaper incluant le troisième patch sur Plugdata |
 
 ## PureData
 
